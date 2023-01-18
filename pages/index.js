@@ -1,4 +1,6 @@
 import Head from 'next/head'
+import {BsLightbulb,BsLightbulbOff} from 'react-icons/bs'
+
 
 
 export default function Home() {
@@ -10,11 +12,25 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
-        <section className="bg-blue-400 min-h-screen ">
-          <h1>Hello</h1>
+      <main className="bg-blue-200 px-10">
+        <section className="bg-blue-200 min-h-screen ">
+          <nav className ="p-2 mb-12 flex justify-between">
+            <h1 className="text-2xl">	&#60;antonyni&#62;</h1>
+            <ul className="flex items-center">
+              <li>
+                <BsLightbulbOff className="cursor-pointer text-xl"/>
+              </li>
+              <li>
+                <a className="bg-blue-300 text-white px-4 py-1 rounded-md ml-8 text-xl" href="#">&#60;resume/&#62;</a>
+              </li>
+
+            </ul>
+      
+          </nav>
+
 
         </section>
+        <h1 className="text-2xl ml-2">	&#60;/antonyni&#62;</h1>
       </main>
     </>
   )
