@@ -2,7 +2,8 @@ v.03
 - fixed padding for description
 - added section for survey project
 - added about brackets with opacity
-- adjusted spacing for name and leading space for description
+- adjusted spacing for name and leading space for
+
 v.02
 - changed color and added name/design choice
 - changed dark mode icon to lightbulb from react icons
