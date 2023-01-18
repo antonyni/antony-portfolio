@@ -13,10 +13,10 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="bg-blue-200 px-10">
-        <section className="bg-blue-200 min-h-screen ">
+      <main className="bg-blue-200 px-10 ">
+        <section className="bg-blue-200 h-screen">
           <nav className ="p-2 mb-12 flex justify-between">
-            <h1 className="text-2xl">	&#60;antonyni&#62;</h1>
+            <h1 className="text-2xl">	&#60;antonyni&#62;</h1> 
             <ul className="flex items-center">
               <li>
                 <AiFillGithub className="text-2xl text-blue-400"/>
@@ -36,15 +36,21 @@ export default function Home() {
 
             </ul>
       
-          </nav>
-          <div className ="text-center">
-            <h2 className="text-xl">Hi I'm Antony!</h2>
-            <p className="px-20 mx-40">Software Engineer with a passion for cool animations. Full-stack development with a focus on CSS, HTML, and
+          </nav>        
+          <h2 className="ml-9 opacity-30">&#60;about&#62;</h2>
+          <div className ="text-center p-10">
+            <h2 className="text-xl mb-5">Hi I'm Antony!</h2>
+            <p className="leading-8 mx-auto max-w-xl">Software Engineer with a passion for cool animations. Full-stack development with a focus on CSS, HTML, and
              JavaScript. Agile enthusiast. Avid podcast, fitness, and video game junkie with a growth mindset. Chronically bad singer. </p>
           </div>
-          
-
-
+          <h2 className="ml-9 mt-5 opacity-30 mb-5">&#60;/about&#62;</h2>
+        </section>
+        <section>
+          <div>
+            <h3 className="text-3xl">
+              my work
+            </h3>
+          </div>
         </section>
         <h1 className="text-2xl ml-2">	&#60;/antonyni&#62;</h1>
       </main>
