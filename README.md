@@ -2,5 +2,8 @@ v.02
 - changed color and added name/design choice
 - changed dark mode icon to lightbulb from react icons
 - made resume button graphic
+- added descriptions and icons for social media with mouse pointer change
+- added centering to description 
+
 v.01
 - boiler plate code for react and tailwind created

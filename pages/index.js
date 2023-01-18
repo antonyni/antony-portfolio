@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import {BsLightbulb,BsLightbulbOff} from 'react-icons/bs'
+import {AiFillGithub,AiFillMediumCircle,AiFillLinkedin} from 'react-icons/ai'
 
 
 
@@ -18,6 +19,15 @@ export default function Home() {
             <h1 className="text-2xl">	&#60;antonyni&#62;</h1>
             <ul className="flex items-center">
               <li>
+                <AiFillGithub className="text-2xl text-blue-400"/>
+              </li>
+              <li>
+                <AiFillMediumCircle className="ml-3 text-2xl text-blue-400"/>
+              </li>
+              <li className="pr-10 ml-3 text-2xl text-blue-400">
+                <AiFillLinkedin/>
+              </li>
+              <li>
                 <BsLightbulbOff className="cursor-pointer text-xl"/>
               </li>
               <li>
@@ -27,6 +37,12 @@ export default function Home() {
             </ul>
       
           </nav>
+          <div className ="text-center">
+            <h2 className="text-xl">Hi I'm Antony!</h2>
+            <p className="px-20 mx-40">Software Engineer with a passion for cool animations. Full-stack development with a focus on CSS, HTML, and
+             JavaScript. Agile enthusiast. Avid podcast, fitness, and video game junkie with a growth mindset. Chronically bad singer. </p>
+          </div>
+          
 
 
         </section>
