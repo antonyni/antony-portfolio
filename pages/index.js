@@ -1,7 +1,6 @@
 import Head from 'next/head'
-import {BsLightbulb,BsLightbulbOff} from 'react-icons/bs'
-import {AiFillGithub,AiFillMediumCircle,AiFillLinkedin} from 'react-icons/ai'
-
+import { BsLightbulb, BsLightbulbOff } from 'react-icons/bs'
+import { AiFillGithub, AiFillMediumCircle, AiFillLinkedin } from 'react-icons/ai'
 
 
 export default function Home() {
@@ -13,37 +12,40 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="bg-blue-200 px-10 ">
-        <section className="bg-blue-200 h-screen">
-          <nav className ="p-2 mb-12 flex justify-between">
-            <h1 className="text-2xl">	&#60;antonyni&#62;</h1> 
+      <main className="bg-blue-200 px-2">
+        <section className="min-h-screen">
+          <nav className="p-2  flex justify-between">
+            <h1 className="text-2xl">	&#60;antonyni&#62;</h1>
             <ul className="flex items-center">
               <li>
-                <AiFillGithub className="text-2xl text-blue-400"/>
+                <AiFillGithub className="text-2xl text-blue-400" />
               </li>
               <li>
-                <AiFillMediumCircle className="ml-3 text-2xl text-blue-400"/>
+                <AiFillMediumCircle className="ml-3 text-2xl text-blue-400" />
               </li>
               <li className="pr-10 ml-3 text-2xl text-blue-400">
-                <AiFillLinkedin/>
+                <AiFillLinkedin />
               </li>
               <li>
-                <BsLightbulbOff className="cursor-pointer text-xl"/>
+                <BsLightbulbOff className="cursor-pointer text-xl" />
               </li>
               <li>
                 <a className="bg-blue-300 text-white px-4 py-1 rounded-md ml-8 text-xl" href="#">&#60;resume/&#62;</a>
               </li>
 
             </ul>
-      
-          </nav>        
-          <h2 className="ml-9 opacity-30">&#60;about&#62;</h2>
-          <div className ="text-center p-10">
-            <h2 className="text-xl mb-5">Hi I'm Antony!</h2>
-            <p className="leading-8 mx-auto max-w-xl">Software Engineer with a passion for cool animations. Full-stack development with a focus on CSS, HTML, and
-             JavaScript. Agile enthusiast. Avid podcast, fitness, and video game junkie with a growth mindset. Chronically bad singer. </p>
+
+
+          </nav>
+          <div className="flex flex-col justify-center min-h-screen pb-3 ">
+            <h2 className="ml-9 opacity-30">&#60;about&#62;</h2>
+            <div className="text-center  p-10">
+              <h2 className="text-xl mb-5">Hi I'm Antony!</h2>
+              <p className="leading-8 mx-auto max-w-xl">Software Engineer with a passion for cool animations. Full-stack development with a focus on CSS, HTML, and
+                JavaScript. Agile enthusiast. Avid podcast, fitness, and video game junkie with a growth mindset. Chronically bad singer. </p>
+            </div>
+            <h2 className="ml-9 mt-5 opacity-30 mb-5">&#60;/about&#62;</h2>
           </div>
-          <h2 className="ml-9 mt-5 opacity-30 mb-5">&#60;/about&#62;</h2>
         </section>
         <section>
           <div>
@@ -53,6 +55,10 @@ export default function Home() {
           </div>
         </section>
         <h1 className="text-2xl ml-2">	&#60;/antonyni&#62;</h1>
+        <div class="container">
+          <div class="text"></div>
+        </div>
+
       </main>
     </>
   )

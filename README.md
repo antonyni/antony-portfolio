@@ -1,3 +1,6 @@
+v.04
+- fixed the screen centering because I understood section and screen height concepts more
+
 v.03
 - fixed padding for description
 - added section for survey project
