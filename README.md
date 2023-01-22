@@ -1,3 +1,13 @@
+v.06
+- added font following next.js convention with Roboto Mono
+- changed main font to arial
+- changed color palette to make the site darker
+- formatted works section
+- added gif of web portfolio project to site
+
+v.05
+- attempted to use JS code with document calls in react
+
 v.04
 - fixed the screen centering because I understood section and screen height concepts more
 
