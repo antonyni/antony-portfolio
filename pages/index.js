@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import { BsLightbulb, BsLightbulbOff } from 'react-icons/bs'
 import { AiFillGithub, AiFillMediumCircle, AiFillLinkedin } from 'react-icons/ai'
-import { useEffect} from 'react'
+import { useEffect, useState } from 'react'
 
 export default function Home() {
   return (
@@ -41,7 +41,7 @@ export default function Home() {
           <div className="flex flex-col justify-center min-h-screen pb-3 ">
             <h2 className="pl-20 opacity-80">&#60;about&#62;</h2>
             <div className="text-center  p-10">
-              <div class="text"></div>
+              <div className="text-4xl text"></div>
               <p className="leading-8 mx-auto max-w-xl">Software Engineer with a passion for cool animations. Full-stack development with a focus on CSS, HTML, and
                 JavaScript. Agile enthusiast. Avid podcast, fitness, and video game junkie with a growth mindset. Chronically bad singer. </p>
             </div>
@@ -124,18 +124,17 @@ const phrases = [
   'My name is Antony.',
   'Nice to meet you!'
 ]
-useEffect(() =>{
+if (typeof window !== "undefined") {
   const el = document.querySelector('.text');
-const fx = new TextScramble(el)
+  const fx = new TextScramble(el);
 
-},[])
+  let counter = 0
+  const next = () => {
+    fx.setText(phrases[counter]).then(() => {
+      setTimeout(next, 800)
+    })
+    counter = (counter + 1) % phrases.length
 
-let counter = 0
-const next = () => {
-  fx.setText(phrases[counter]).then(() => {
-    setTimeout(next, 800)
-  })
-  counter = (counter + 1) % phrases.length
+  }
+  next()
 }
-
-next()
