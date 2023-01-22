@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import { BsLightbulb, BsLightbulbOff } from 'react-icons/bs'
 import { AiFillGithub, AiFillMediumCircle, AiFillLinkedin } from 'react-icons/ai'
-
+import { useEffect} from 'react'
 
 export default function Home() {
   return (
@@ -15,7 +15,7 @@ export default function Home() {
       <main className="bg-blue-200 px-2">
         <section className="min-h-screen">
           <nav className="p-2  flex justify-between">
-            <h1 className="text-2xl">	&#60;antonyni&#62;</h1>
+            <h1 className="pl-4 text-2xl">	&#60;antonyni&#62;</h1>
             <ul className="flex items-center">
               <li>
                 <AiFillGithub className="text-2xl text-blue-400" />
@@ -37,14 +37,15 @@ export default function Home() {
 
 
           </nav>
+
           <div className="flex flex-col justify-center min-h-screen pb-3 ">
-            <h2 className="ml-9 opacity-30">&#60;about&#62;</h2>
+            <h2 className="pl-20 opacity-80">&#60;about&#62;</h2>
             <div className="text-center  p-10">
-              <h2 className="text-xl mb-5">Hi I'm Antony!</h2>
+              <div class="text"></div>
               <p className="leading-8 mx-auto max-w-xl">Software Engineer with a passion for cool animations. Full-stack development with a focus on CSS, HTML, and
                 JavaScript. Agile enthusiast. Avid podcast, fitness, and video game junkie with a growth mindset. Chronically bad singer. </p>
             </div>
-            <h2 className="ml-9 mt-5 opacity-30 mb-5">&#60;/about&#62;</h2>
+            <h2 className="pl-20 mt-5 opacity-80 mb-5">&#60;/about&#62;</h2>
           </div>
         </section>
         <section>
@@ -54,7 +55,7 @@ export default function Home() {
             </h3>
           </div>
         </section>
-        <h1 className="text-2xl ml-2">	&#60;/antonyni&#62;</h1>
+        <h1 className="text-2xl pl-4">	&#60;/antonyni&#62;</h1>
         <div class="container">
           <div class="text"></div>
         </div>
@@ -63,3 +64,78 @@ export default function Home() {
     </>
   )
 }
+class TextScramble {
+  constructor(el) {
+    this.el = el
+    this.chars = '!<>-_\\/[]{}—=+*^?#________'
+    this.update = this.update.bind(this)
+  }
+  setText(newText) {
+    const oldText = this.el.innerText
+    const length = Math.max(oldText.length, newText.length)
+    const promise = new Promise((resolve) => this.resolve = resolve)
+    this.queue = []
+    for (let i = 0; i < length; i++) {
+      const from = oldText[i] || ''
+      const to = newText[i] || ''
+      const start = Math.floor(Math.random() * 40)
+      const end = start + Math.floor(Math.random() * 40)
+      this.queue.push({ from, to, start, end })
+    }
+    cancelAnimationFrame(this.frameRequest)
+    this.frame = 0
+    this.update()
+    return promise
+  }
+  update() {
+    let output = ''
+    let complete = 0
+    for (let i = 0, n = this.queue.length; i < n; i++) {
+      let { from, to, start, end, char } = this.queue[i]
+      if (this.frame >= end) {
+        complete++
+        output += to
+      } else if (this.frame >= start) {
+        if (!char || Math.random() < 0.28) {
+          char = this.randomChar()
+          this.queue[i].char = char
+        }
+        output += `<span class="dud">${char}</span>`
+      } else {
+        output += from
+      }
+    }
+    this.el.innerHTML = output
+    if (complete === this.queue.length) {
+      this.resolve()
+    } else {
+      this.frameRequest = requestAnimationFrame(this.update)
+      this.frame++
+    }
+  }
+  randomChar() {
+    return this.chars[Math.floor(Math.random() * this.chars.length)]
+  }
+}
+
+
+const phrases = [
+  'Hi!',
+  'My name is Antony.',
+  'Nice to meet you!'
+]
+useEffect(() =>{
+  const el = document.querySelector('.text');
+const fx = new TextScramble(el)
+
+},[])
+
+let counter = 0
+const next = () => {
+  fx.setText(phrases[counter]).then(() => {
+    setTimeout(next, 800)
+  })
+  counter = (counter + 1) % phrases.length
+}
+
+next()
