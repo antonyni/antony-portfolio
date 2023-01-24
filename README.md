@@ -1,3 +1,7 @@
+v.07
+-changed stylesheet link format to _document.js for next.js best practice
+-added gif of portfolio project
+
 v.06
 - added font following next.js convention with Roboto Mono
 - changed main font to arial
