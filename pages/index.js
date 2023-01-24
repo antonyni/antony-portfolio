@@ -53,7 +53,7 @@ export default function Home() {
           <div className="flex flex-col justify-center min-h-screen pb-3 ">
             <h2 className="pl-20 opacity-90">&#60;projects&#62;</h2>
             <div className="flex justify-center">
-             <Image src={bork} width={700} className="border-4 border-black"/>
+             <Image src={bork}  height={800} className="border-2 border-black w-1/4"/>
             </div>
             <h2 className="pl-20 opacity-90">&#60;/projects&#62;</h2>
           </div>
