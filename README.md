@@ -4,6 +4,7 @@ v.09
 - fixed typos 
 - added icon and changed description
 - increased text visibility
+- added resume file and fixed asset folder to be nextjs compliant
 
 v.08
 - added padding to projects section

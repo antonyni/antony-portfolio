@@ -2,7 +2,7 @@ import Head from 'next/head'
 import { BsLightbulb, BsLightbulbOff } from 'react-icons/bs'
 import { AiFillGithub, AiFillMediumCircle, AiFillLinkedin } from 'react-icons/ai'
 import Image from "next/image";
-import bork from '../assets/webport.gif'
+import bork from 'webport.gif'
 export default function Home() {
   return (
     <>
@@ -12,7 +12,7 @@ export default function Home() {
         <title>Antony Ni Portfolio</title>
         <meta name="description" content="Web portfolio for Antony Ni, Full-Stack Developer" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/letter-a.ico" />
+        <link rel="icon" href="/letter-a.ico/" />
       </Head>
       <main className="bg-blue-300 px-2">
         <section className="">
@@ -32,7 +32,7 @@ export default function Home() {
                 <BsLightbulbOff className="cursor-pointer text-xl" />
               </li>
               <li>
-                <a className="bg-blue-400 text-white px-4 py-1 rounded-md ml-8 text-xl" href="assets/resume.pdf" download>&#60;resume/&#62;</a>
+                <a className="bg-blue-400 text-white px-4 py-1 rounded-md ml-8 text-xl" href="Resume for Antony Ni.pdf" download >&#60;resume/&#62;</a>
               </li>
             </ul>
           </nav>
