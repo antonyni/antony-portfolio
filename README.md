@@ -2,6 +2,7 @@ v.09
 - deployed online to https://antony-portfolio-antonyni.vercel.app/
 - fixed spacing
 - fixed typos 
+- added icon and changed description
 
 v.08
 - added padding to projects section
