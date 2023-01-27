@@ -1,5 +1,6 @@
 v.10
 - fixed hydration issue with scrambler with useEffect
+- added links to Github, Medium, and LinkedIn
 
 v.09
 - deployed online to https://antony-portfolio-antonyni.vercel.app/

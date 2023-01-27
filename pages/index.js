@@ -34,13 +34,13 @@ export default function Home() {
             <h1 className="pl-4 text-2xl font-semibold">	&#60;antonyni&#62;</h1>
             <ul className="flex items-center">
               <li>
-                <AiFillGithub className="text-2xl text-blue-500" />
+                <a href="https://github.com/antonyni" target="_blank"><AiFillGithub className="text-2xl text-blue-500" /></a>
               </li>
               <li>
-                <AiFillMediumCircle className="ml-3 text-2xl text-blue-500" />
+              <a href="https://medium.com/@antonyni1010" target="_blank"><AiFillMediumCircle className="ml-3 text-2xl text-blue-500" /></a>
               </li>
               <li className="pr-10 ml-3 text-2xl text-blue-500">
-                <AiFillLinkedin />
+              <a href="https://www.linkedin.com/in/antonyni1010/" target="_blank"><AiFillLinkedin /></a>
               </li>
               <li>
                 <BsLightbulbOff className="cursor-pointer text-xl" />
