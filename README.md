@@ -3,6 +3,7 @@ v.09
 - fixed spacing
 - fixed typos 
 - added icon and changed description
+- increased text visibility
 
 v.08
 - added padding to projects section

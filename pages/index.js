@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import { BsLightbulb, BsLightbulbOff } from 'react-icons/bs'
 import { AiFillGithub, AiFillMediumCircle, AiFillLinkedin } from 'react-icons/ai'
-import Image from"next/image";
+import Image from "next/image";
 import bork from '../assets/webport.gif'
 export default function Home() {
   return (
@@ -17,7 +17,7 @@ export default function Home() {
       <main className="bg-blue-300 px-2">
         <section className="">
           <nav className="p-2  flex justify-between">
-            <h1 className="pl-4 text-2xl">	&#60;antonyni&#62;</h1>
+            <h1 className="pl-4 text-2xl font-semibold">	&#60;antonyni&#62;</h1>
             <ul className="flex items-center">
               <li>
                 <AiFillGithub className="text-2xl text-blue-500" />
@@ -37,29 +37,29 @@ export default function Home() {
             </ul>
           </nav>
           <div className="flex flex-col justify-center min-h-screen pb-3 ">
-            <h2 className="pl-20 opacity-90">&#60;about&#62;</h2>
+            <h2 className="pl-20 ">&#60;about&#62;</h2>
             <div className="text-center  p-10">
               <div className="text-3xl text check"></div>
-              <p className="leading-8 mx-auto max-w-2xl text-md">Software Engineer with a passion for cool animations. Full-stack development with a focus on CSS, HTML, and
+              <p className="leading-8 mx-auto max-w-2xl text-md font-semibold">Software Engineer with a passion for cool animations. Full-stack development with a focus on CSS, HTML, and
                 JavaScript. Agile enthusiast. Avid podcast, fitness, and video game junkie with a growth mindset. Chronically bad singer. </p>
             </div>
-            <h2 className="pl-20 mt-5 opacity-90 mb-5">&#60;/about&#62;</h2>
+            <h2 className="pl-20 mt-5 mb-5">&#60;/about&#62;</h2>
           </div>
         </section>
         <section className="">
-          <h3 className="pb-10 text-3xl text-center">
+          <h3 className="pb-10 text-3xl text-center font-semibold">
             my work
           </h3>
           <div className="flex flex-col justify-center  pb-3 ">
-            <h2 className="pl-20 opacity-90">&#60;projects&#62;</h2>
+            <h2 className="pl-20 ">&#60;projects&#62;</h2>
             <div className="py-20 flex justify-center">
-             <Image src={bork}  height={800} className="border-2 border-black w-1/4"/>
-             <p className ="text-xl max-w-sm  pl-10 my-auto">Web Portfolio: Uses Next.js, React, Tailwind, Html, CSS, JavaScript, git</p>
+              <Image src={bork} height={800} className="border-2 border-black w-1/4" />
+              <p className="text-xl max-w-sm  font-semibold pl-10 my-auto">Web Portfolio: Uses Next.js, React, Tailwind, Html, CSS, JavaScript, git</p>
             </div>
-            <h2 className="pl-20 opacity-90">&#60;/projects&#62;</h2>
+            <h2 className="pl-20 ">&#60;/projects&#62;</h2>
           </div>
         </section>
-        <h1 className="text-2xl pl-4">	&#60;/antonyni&#62;</h1>
+        <h1 className="text-2xl pl-4 font-semibold pb-2">	&#60;/antonyni&#62;</h1>
       </main>
     </>
   )
