@@ -32,7 +32,7 @@ export default function Home() {
                 <BsLightbulbOff className="cursor-pointer text-xl" />
               </li>
               <li>
-                <a className="bg-blue-400 text-white px-4 py-1 rounded-md ml-8 text-xl" href="#">&#60;resume/&#62;</a>
+                <a className="bg-blue-400 text-white px-4 py-1 rounded-md ml-8 text-xl" href="assets/resume.pdf" download>&#60;resume/&#62;</a>
               </li>
             </ul>
           </nav>
