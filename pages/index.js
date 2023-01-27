@@ -3,7 +3,21 @@ import { BsLightbulb, BsLightbulbOff } from 'react-icons/bs'
 import { AiFillGithub, AiFillMediumCircle, AiFillLinkedin } from 'react-icons/ai'
 import Image from "next/image";
 import bork from 'webport.gif'
+import { useEffect, useState } from "react";
 export default function Home() {
+  useEffect(()=>{
+    const el = document.querySelector('.text');
+    const fx = new TextScramble(el);
+    
+    let counter = 0
+    const next = () => {
+      fx.setText(phrases[counter]).then(() => {
+        setTimeout(next, 1200)
+      })
+      counter = (counter + 1) % phrases.length
+    
+    }
+    next()})
   return (
     <>
       <Head>
@@ -59,11 +73,14 @@ export default function Home() {
             <h2 className="pl-20 ">&#60;/projects&#62;</h2>
           </div>
         </section>
-        <h1 className="text-2xl pl-4 font-semibold pb-2">	&#60;/antonyni&#62;</h1>
+        <h1 className="text-2xl pl-4 font-semibold pb-3">	&#60;/antonyni&#62;</h1>
       </main>
     </>
+    
+    
   )
 }
+
 class TextScramble {
   constructor(el) {
     this.el = el
@@ -123,17 +140,3 @@ const phrases = [
   'My name is Antony.',
   'Nice to meet you!'
 ]
-if (typeof window !== "undefined") {
-  const el = document.querySelector('.text');
-  const fx = new TextScramble(el);
-
-  let counter = 0
-  const next = () => {
-    fx.setText(phrases[counter]).then(() => {
-      setTimeout(next, 1200)
-    })
-    counter = (counter + 1) % phrases.length
-
-  }
-  next()
-}

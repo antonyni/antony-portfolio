@@ -1,3 +1,6 @@
+v.10
+- fixed hydration issue with scrambler with useEffect
+
 v.09
 - deployed online to https://antony-portfolio-antonyni.vercel.app/
 - fixed spacing
@@ -5,6 +8,7 @@ v.09
 - added icon and changed description
 - increased text visibility
 - added resume file and fixed asset folder to be nextjs compliant
+
 
 v.08
 - added padding to projects section
