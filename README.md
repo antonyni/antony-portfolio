@@ -1,6 +1,11 @@
+v.08
+-added padding to projects section
+-formatted and added description to project
+
 v.07
 -changed stylesheet link format to _document.js for next.js best practice
 -added gif of portfolio project
+-changed width of gif
 
 v.06
 - added font following next.js convention with Roboto Mono

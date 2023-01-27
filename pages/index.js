@@ -52,8 +52,9 @@ export default function Home() {
           </h3>
           <div className="flex flex-col justify-center min-h-screen pb-3 ">
             <h2 className="pl-20 opacity-90">&#60;projects&#62;</h2>
-            <div className="flex justify-center">
+            <div className="py-20 flex justify-center">
              <Image src={bork}  height={800} className="border-2 border-black w-1/4"/>
+             <p className ="text-xl max-w-sm -100 pl-10 my-auto">Web Portfolio: Uses Next.js, React, Tailwind, Html, CSS, JavaScript</p>
             </div>
             <h2 className="pl-20 opacity-90">&#60;/projects&#62;</h2>
           </div>
