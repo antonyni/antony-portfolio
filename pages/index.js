@@ -15,7 +15,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="bg-blue-300 px-2">
-        <section className="min-h-screen">
+        <section className="">
           <nav className="p-2  flex justify-between">
             <h1 className="pl-4 text-2xl">	&#60;antonyni&#62;</h1>
             <ul className="flex items-center">
@@ -47,14 +47,14 @@ export default function Home() {
           </div>
         </section>
         <section className="">
-          <h3 className="text-3xl text-center">
+          <h3 className="pb-10 text-3xl text-center">
             my work
           </h3>
-          <div className="flex flex-col justify-center min-h-screen pb-3 ">
+          <div className="flex flex-col justify-center  pb-3 ">
             <h2 className="pl-20 opacity-90">&#60;projects&#62;</h2>
             <div className="py-20 flex justify-center">
              <Image src={bork}  height={800} className="border-2 border-black w-1/4"/>
-             <p className ="text-xl max-w-sm  pl-10 my-auto">dWeb Portfolio: Uses Next.js, React, Tailwind, Html, CSS, JavaScript, git</p>
+             <p className ="text-xl max-w-sm  pl-10 my-auto">Web Portfolio: Uses Next.js, React, Tailwind, Html, CSS, JavaScript, git</p>
             </div>
             <h2 className="pl-20 opacity-90">&#60;/projects&#62;</h2>
           </div>
