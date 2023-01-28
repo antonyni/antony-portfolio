@@ -31,7 +31,7 @@ export default function Home() {
       <main className="bg-blue-300 px-2">
         <section className="">
           <nav className="p-2  flex justify-between">
-            <h1 className="pl-4 text-2xl font-semibold">	&#60;antonyni&#62;</h1>
+            <h1 className="pl-4 text-2xl">	&#60;antonyni&#62;</h1>
             <ul className="flex items-center">
               <li>
                 <a href="https://github.com/antonyni" target="_blank"><AiFillGithub className="text-2xl text-blue-500" /></a>
@@ -73,7 +73,7 @@ export default function Home() {
             <h2 className="pl-20 ">&#60;/projects&#62;</h2>
           </div>
         </section>
-        <h1 className="text-2xl pl-4 font-semibold pb-3">	&#60;/antonyni&#62;</h1>
+        <h1 className="text-2xl pl-4  pb-3">	&#60;/antonyni&#62;</h1>
       </main>
     </>
     
