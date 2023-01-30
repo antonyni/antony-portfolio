@@ -1,5 +1,5 @@
 v.11
-- added dark mode
+- added dark mode functionality with javascript
 
 v.10
 - fixed hydration issue with scrambler with useEffect
