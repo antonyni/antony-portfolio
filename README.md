@@ -1,3 +1,6 @@
+v.11
+- added dark mode
+
 v.10
 - fixed hydration issue with scrambler with useEffect
 - added links to Github, Medium, and LinkedIn

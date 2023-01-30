@@ -5,6 +5,8 @@ import Image from "next/image";
 import bork from 'webport.gif'
 import { useEffect, useState } from "react";
 export default function Home() {
+  const[darkMode, setDarkMode]= useState(true);
+  const[iconActive,setIconActive] = useState(true);
   useEffect(()=>{
     const el = document.querySelector('.text');
     const fx = new TextScramble(el);
@@ -19,7 +21,7 @@ export default function Home() {
     }
     next()})
   return (
-    <>
+    <div className={darkMode ? "dark" : ""}>
       <Head>
 
 
@@ -28,22 +30,24 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/letter-a.ico/" />
       </Head>
-      <main className="bg-blue-300 px-2">
+      <main className="bg-blue-300 px-2 dark:bg-gray-900">
         <section className="">
           <nav className="p-2  flex justify-between">
-            <h1 className="pl-4 text-2xl font-semibold">	&#60;antonyni&#62;</h1>
+            <h1 className="pl-4 text-2xl font-semibold dark:text-blue-300">	&#60;antonyni&#62;</h1>
             <ul className="flex items-center">
               <li>
-                <a href="https://github.com/antonyni" target="_blank"><AiFillGithub className="text-2xl text-blue-500" /></a>
+                <a href="https://github.com/antonyni" target="_blank"><AiFillGithub className="text-2xl text-blue-500 dark:text-blue-300" /></a>
               </li>
               <li>
-              <a href="https://medium.com/@antonyni1010" target="_blank"><AiFillMediumCircle className="ml-3 text-2xl text-blue-500" /></a>
+              <a href="https://medium.com/@antonyni1010" target="_blank"><AiFillMediumCircle className="ml-3 text-2xl text-blue-500 dark:text-blue-300" /></a>
               </li>
               <li className="pr-10 ml-3 text-2xl text-blue-500">
-              <a href="https://www.linkedin.com/in/antonyni1010/" target="_blank"><AiFillLinkedin /></a>
+              <a href="https://www.linkedin.com/in/antonyni1010/" target="_blank"><AiFillLinkedin className= "dark:text-blue-300" /></a>
               </li>
               <li>
-                <BsLightbulbOff className="cursor-pointer text-xl" />
+                <div onClick={()=>{setDarkMode(!darkMode);setIconActive(!iconActive)}}className="cursor-pointer text-xl">
+                  {iconActive? (<BsLightbulb className="text-blue-300" />):(<BsLightbulbOff/>) }
+                </div>
               </li>
               <li>
                 <a className="bg-blue-400 text-white px-4 py-1 rounded-md ml-8 text-xl" href="Resume for Antony Ni.pdf" download >&#60;resume/&#62;</a>
@@ -51,31 +55,31 @@ export default function Home() {
             </ul>
           </nav>
           <div className="flex flex-col justify-center min-h-screen pb-3 ">
-            <h2 className="pl-20 ">&#60;about&#62;</h2>
+            <h2 className="pl-20 dark:text-blue-300">&#60;about&#62;</h2>
             <div className="text-center  p-10">
-              <div className="text-3xl text check"></div>
-              <p className="leading-8 mx-auto max-w-2xl text-md font-semibold">Software Engineer with a passion for cool animations. Full-stack development with a focus on CSS, HTML, and
+              <div className="text-3xl text  dark:text-blue-300"></div>
+              <p className="leading-8 mx-auto max-w-2xl text-md font-semibold dark:text-blue-300">Software Engineer with a passion for cool animations. Full-stack development with a focus on CSS, HTML, and
                 JavaScript. Agile enthusiast. Avid podcast, fitness, and video game junkie with a growth mindset. Chronically bad singer. </p>
             </div>
-            <h2 className="pl-20 mt-5 mb-5">&#60;/about&#62;</h2>
+            <h2 className="pl-20 mt-5 mb-5 dark:text-blue-300">&#60;/about&#62;</h2>
           </div>
         </section>
         <section className="">
-          <h3 className="pb-10 text-3xl text-center font-semibold">
+          <h3 className="pb-10 text-3xl text-center font-semibold dark:text-blue-300">
             my work
           </h3>
           <div className="flex flex-col justify-center  pb-3 ">
-            <h2 className="pl-20 ">&#60;projects&#62;</h2>
+            <h2 className="pl-20 dark:text-blue-300">&#60;projects&#62;</h2>
             <div className="py-20 flex justify-center">
               <Image src={bork} height={800} className="border-2 border-black w-1/4" />
-              <p className="text-xl max-w-sm  font-semibold pl-10 my-auto">Web Portfolio: Uses Next.js, React, Tailwind, Html, CSS, JavaScript, git</p>
+              <p className="text-xl max-w-sm  font-semibold pl-10 my-auto dark:text-blue-300">Web Portfolio: Uses Next.js, React, Tailwind, Html, CSS, JavaScript, git</p>
             </div>
-            <h2 className="pl-20 ">&#60;/projects&#62;</h2>
+            <h2 className="pl-20 dark:text-blue-300">&#60;/projects&#62;</h2>
           </div>
         </section>
-        <h1 className="text-2xl pl-4 font-semibold pb-3">	&#60;/antonyni&#62;</h1>
+        <h1 className="text-2xl pl-4 font-semibold pb-3 dark:text-blue-300">	&#60;/antonyni&#62;</h1>
       </main>
-    </>
+    </div>
     
     
   )
