@@ -1,3 +1,6 @@
+v.12
+- fixed spamming lightmode bug which caused the text scramble to speed up
+
 v.11
 - added dark mode functionality with javascript
 

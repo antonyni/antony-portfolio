@@ -5,21 +5,28 @@ import Image from "next/image";
 import bork from 'webport.gif'
 import { useEffect, useState } from "react";
 export default function Home() {
-  const[darkMode, setDarkMode]= useState(true);
-  const[iconActive,setIconActive] = useState(true);
-  useEffect(()=>{
-    const el = document.querySelector('.text');
-    const fx = new TextScramble(el);
-    
-    let counter = 0
-    const next = () => {
-      fx.setText(phrases[counter]).then(() => {
-        setTimeout(next, 1200)
-      })
-      counter = (counter + 1) % phrases.length
-    
+  const [darkMode, setDarkMode] = useState(true);
+  const [iconActive, setIconActive] = useState(true);
+  const [Time, setTime] = useState(1200);
+  const [done, setDone] = useState(false);
+  useEffect(() => {
+    if (!done) {
+      const el = document.querySelector('.text');
+      const fx = new TextScramble(el);
+      let counter = 0
+
+      const next = () => {
+        fx.setText(phrases[counter]).then(() => {
+          setTimeout(next, Time)
+        })
+        counter = (counter + 1) % phrases.length
+
+      }
+      next()
     }
-    next()})
+    setDone(true);
+  })
+
   return (
     <div className={darkMode ? "dark" : ""}>
       <Head>
@@ -33,20 +40,20 @@ export default function Home() {
       <main className="bg-blue-300 px-2 dark:bg-gray-900">
         <section className="">
           <nav className="p-2  flex justify-between">
-            <h1 className="pl-4 text-2xl font-semibold dark:text-blue-300">	&#60;antonyni&#62;</h1>
+            <h1 className="pl-4 text-2xl font-semibold dark:text-blue-300  " id="messenger">	&#60;antonyni&#62;</h1>
             <ul className="flex items-center">
               <li>
                 <a href="https://github.com/antonyni" target="_blank"><AiFillGithub className="text-2xl text-blue-500 dark:text-blue-300" /></a>
               </li>
               <li>
-              <a href="https://medium.com/@antonyni1010" target="_blank"><AiFillMediumCircle className="ml-3 text-2xl text-blue-500 dark:text-blue-300" /></a>
+                <a href="https://medium.com/@antonyni1010" target="_blank"><AiFillMediumCircle className="ml-3 text-2xl text-blue-500 dark:text-blue-300" /></a>
               </li>
               <li className="pr-10 ml-3 text-2xl text-blue-500">
-              <a href="https://www.linkedin.com/in/antonyni1010/" target="_blank"><AiFillLinkedin className= "dark:text-blue-300" /></a>
+                <a href="https://www.linkedin.com/in/antonyni1010/" target="_blank"><AiFillLinkedin className="dark:text-blue-300" /></a>
               </li>
               <li>
-                <div onClick={()=>{setDarkMode(!darkMode);setIconActive(!iconActive)}}className="cursor-pointer text-xl">
-                  {iconActive? (<BsLightbulb className="text-blue-300" />):(<BsLightbulbOff/>) }
+                <div onClick={() => { setDarkMode(!darkMode); setIconActive(!iconActive) }} className="cursor-pointer text-xl">
+                  {iconActive ? (<BsLightbulb className="text-blue-300" />) : (<BsLightbulbOff />)}
                 </div>
               </li>
               <li>
@@ -80,8 +87,8 @@ export default function Home() {
         <h1 className="text-2xl pl-4 font-semibold pb-3 dark:text-blue-300">	&#60;/antonyni&#62;</h1>
       </main>
     </div>
-    
-    
+
+
   )
 }
 
