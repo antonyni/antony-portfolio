@@ -1,3 +1,8 @@
+v.13
+- made site more responsive on mobile devices
+- implemented contact form with email.js
+- added an alert confirmation popup
+
 v.12
 - fixed spamming lightmode bug which caused the text scramble to speed up
 

@@ -1,14 +1,29 @@
 import Head from 'next/head'
 import { BsLightbulb, BsLightbulbOff } from 'react-icons/bs'
-import { AiFillGithub, AiFillMediumCircle, AiFillLinkedin } from 'react-icons/ai'
+import { AiFillGithub, AiFillMediumCircle, AiFillLinkedin, AiFillCaretRight } from 'react-icons/ai'
 import Image from "next/image";
 import bork from 'webport.gif'
 import { useEffect, useState } from "react";
+import React, { useRef } from 'react';
+import emailjs from 'emailjs-com';
+
 export default function Home() {
   const [darkMode, setDarkMode] = useState(true);
   const [iconActive, setIconActive] = useState(true);
-  const [Time, setTime] = useState(1200);
+  const [Time] = useState(1200);
   const [done, setDone] = useState(false);
+  const form = useRef();
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_2jj3zhg', 'template_bblpria', form.current, '4PPyuNUJscIgNXPv_')
+      .then((result) => {
+        console.log(result.text);
+      }, (error) => {
+        console.log(error.text);
+      });
+      e.target.reset();
+  };
   useEffect(() => {
     if (!done) {
       const el = document.querySelector('.text');
@@ -37,7 +52,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/letter-a.ico/" />
       </Head>
-      <main className="bg-blue-300 px-2 dark:bg-gray-900">
+      <main className="bg-blue-300 px-2 dark:bg-gray-900 min-w-fit">
         <section className="">
           <nav className="p-2  flex justify-between">
             <h1 className="pl-4 text-2xl font-semibold dark:text-blue-300  " id="messenger">	&#60;antonyni&#62;</h1>
@@ -84,7 +99,23 @@ export default function Home() {
             <h2 className="pl-20 dark:text-blue-300">&#60;/projects&#62;</h2>
           </div>
         </section>
-        <h1 className="text-2xl pl-4 font-semibold pb-3 dark:text-blue-300">	&#60;/antonyni&#62;</h1>
+        <section className="pt-20 mt-20">
+          <h2 className="pl-20 dark:text-blue-300">&#60;contact&#62;</h2>
+          <h3 className="pb-10 text-3xl text-center font-semibold dark:text-blue-300">
+            let's talk
+          </h3>
+          <form ref={form} onSubmit={()=>{sendEmail; alert("Message sent! Talk to you soon.")}} className="flex flex-col gap-3 w-1/2 mx-auto dark:text-blue-300 border-blue-300">
+            <input className="bg-transparent dark:border-blue-300 border-gray-900 border rounded-sm" type="text" name="name" placeholder="Full Name" required />
+            <input className="bg-transparent dark:border-blue-300 border-gray-900 border rounded-sm" type="email" name="email" placeholder="Email" required />
+            <textarea className="bg-transparent dark:border-blue-300 border-gray-900 border rounded-sm resize-none" name="message" rows="7" column="7" placeholder="Your Message" required>
+            </textarea>
+                <button className="bg-blue-400 text-white rounded-md w-1/5 py-3 text-l" type="submit">Send Message</button>
+          </form>
+
+          <h2 className="pl-20 dark:text-blue-300">&#60;/contact&#62;</h2>
+
+        </section>
+        <h1 className="pt-20 text-2xl pl-4 font-semibold pb-3 dark:text-blue-300">	&#60;/antonyni&#62;</h1>
       </main>
     </div>
 
