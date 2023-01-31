@@ -2,7 +2,7 @@ import Head from 'next/head'
 import { BsLightbulb, BsLightbulbOff } from 'react-icons/bs'
 import { AiFillGithub, AiFillMediumCircle, AiFillLinkedin, AiFillCaretRight } from 'react-icons/ai'
 import Image from "next/image";
-import bork from 'webport.gif'
+import bork from '../public/webport.gif'
 import { useEffect, useState } from "react";
 import React, { useRef } from 'react';
 import emailjs from 'emailjs-com';
@@ -106,9 +106,9 @@ export default function Home() {
             let's talk
           </h3>
           <form ref={form} onSubmit={sendEmail} className="flex flex-col gap-3 w-1/2 mx-auto dark:text-blue-300 border-blue-300">
-            <input className="bg-transparent dark:border-blue-300 border-gray-900 border rounded-sm" type="text" name="name" placeholder="Full Name" required />
-            <input className="bg-transparent dark:border-blue-300 border-gray-900 border rounded-sm" type="email" name="email" placeholder="Email" required />
-            <textarea className="bg-transparent dark:border-blue-300 border-gray-900 border rounded-sm resize-none" name="message" rows="7" column="7" placeholder="Your Message" required>
+            <input className="bg-transparent dark:border-blue-300 border-gray-900 border rounded-sm dark:placeholder-gray-400 placeholder-gray-900" type="text" name="name" placeholder="Full Name" required />
+            <input className="bg-transparent dark:border-blue-300 border-gray-900 border rounded-sm dark:placeholder-gray-400 placeholder-gray-900" type="email" name="email" placeholder="Email" required />
+            <textarea className="bg-transparent dark:border-blue-300 border-gray-900 border rounded-sm resize-none dark:placeholder-gray-400 placeholder-gray-900" name="message" rows="7" column="7" placeholder="Your Message" required>
             </textarea>
                 <button className="bg-blue-400 text-white rounded-md w-1/5 py-3 text-l" type="submit">Send Message</button>
           </form>
