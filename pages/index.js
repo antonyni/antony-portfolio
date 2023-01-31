@@ -23,6 +23,7 @@ export default function Home() {
         console.log(error.text);
       });
       e.target.reset();
+      alert("Message Sent! Talk to you soon.");
   };
   useEffect(() => {
     if (!done) {
@@ -104,7 +105,7 @@ export default function Home() {
           <h3 className="pb-10 text-3xl text-center font-semibold dark:text-blue-300">
             let's talk
           </h3>
-          <form ref={form} onSubmit={()=>{sendEmail; alert("Message sent! Talk to you soon.")}} className="flex flex-col gap-3 w-1/2 mx-auto dark:text-blue-300 border-blue-300">
+          <form ref={form} onSubmit={sendEmail} className="flex flex-col gap-3 w-1/2 mx-auto dark:text-blue-300 border-blue-300">
             <input className="bg-transparent dark:border-blue-300 border-gray-900 border rounded-sm" type="text" name="name" placeholder="Full Name" required />
             <input className="bg-transparent dark:border-blue-300 border-gray-900 border rounded-sm" type="email" name="email" placeholder="Email" required />
             <textarea className="bg-transparent dark:border-blue-300 border-gray-900 border rounded-sm resize-none" name="message" rows="7" column="7" placeholder="Your Message" required>
