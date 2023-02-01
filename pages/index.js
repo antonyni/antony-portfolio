@@ -160,7 +160,7 @@ export default function Home() {
               <div className=" flex flex-col w-4/5 pt-5 pb-10  dark:bg-gray-800 bg-blue-200 shadow-2xl rounded-xl my-10">
                 <p className="dark:text-blue-300 font-semibold text-center pb-4 text-2xl">Portfolio Survey</p>
                 <div className="flex justify-between ml-10 mr-10">
-                  <Image src={survey} className="border-2 border-transparent border-black   w-2/5  object-contain" />
+                  <Image src={survey} className="border-2 border-transparent   w-2/5  object-contain" />
 
                   <div className="flex flex-col justify-between pl-10 w-3/5">
                     <p className="dark:text-blue-300 text-left text-sm" >Description: Survey demo using basic CSS,HTML, and JavaScript. Demonstrates correct formating and usage of the CSS form template and also proper formating of textarea and selectbox. The static demo is deployed on Github.</p>
@@ -177,7 +177,7 @@ export default function Home() {
               <div className=" flex flex-col w-4/5 pt-5 pb-10  dark:bg-gray-800 bg-blue-200 shadow-2xl rounded-xl my-10">
                 <p className="dark:text-blue-300 font-semibold text-center pb-4 text-2xl">Arduino Tic-Tac-Toe</p>
                 <div className="flex justify-between ml-10 mr-10">
-                  <Image src={ard} className="border-2 border-transparent border-black   w-2/5  object-contain" />
+                  <Image src={ard} className="border-2 border-transparent   w-2/5  object-contain" />
 
                   <div className="flex flex-col justify-between pl-10 w-3/5">
                     <p className="dark:text-blue-300 text-left text-sm" >Description: A 2-person school project involving a human player playing versus an AI in tic-tac-toe. Utilized a custom AI minimax algorithm to find the best possible moves. Buttons and bluetooth communication with the arduino was used along with LED lights to display the game state. Charlieplexing was used for the wiring.</p>
