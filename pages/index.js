@@ -117,13 +117,13 @@ export default function Home() {
               
             </div>
             <div className ="flex flex-col  dark:bg-gray-800 bg-blue-200  mb-32 rounded-xl p-6 w-1/5 dark:text-blue-300">
-              <p className="text-2xl  border-b-4 dark:border-gray-900 mb-4"> Tools / Concepts</p>
+              <p className="text-2xl  border-b-4 dark:border-gray-900 mb-4">Tools</p>
               <p> Git</p>
               <p> Bash</p>
               <p> VS Code</p>
               <p> Vercel</p>
               <p> AWS</p>
-              <p> Angular</p>
+              <p> Agile</p>
               <p> Microservices</p>
               <p> SAAS</p>
             </div>
