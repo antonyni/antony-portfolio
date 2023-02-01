@@ -6,6 +6,8 @@ import bork from '../public/webport.gif'
 import { useEffect, useState } from "react";
 import React, { useRef } from 'react';
 import emailjs from 'emailjs-com';
+import survey from '../public/survey.png';
+import ard from '../public/arduino.png';
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(true);
@@ -22,8 +24,8 @@ export default function Home() {
       }, (error) => {
         console.log(error.text);
       });
-      e.target.reset();
-      alert("Message Sent! Talk to you soon.");
+    e.target.reset();
+    alert("Message Sent! Talk to you soon.");
   };
   useEffect(() => {
     if (!done) {
@@ -53,7 +55,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/letter-a.ico/" />
       </Head>
-      <main className="bg-blue-300 px-2 dark:bg-gray-900 min-w-fit">
+      <main className="bg-blue-300 px-2 dark:bg-gray-900 min-w-fit overflow-hidden">
         <section className="">
           <nav className="p-2  flex justify-between">
             <h1 className="pl-4 text-2xl font-semibold dark:text-blue-300  " id="messenger">	&#60;antonyni&#62;</h1>
@@ -73,7 +75,7 @@ export default function Home() {
                 </div>
               </li>
               <li>
-                <a className="bg-blue-400 text-white px-4 py-1 rounded-md ml-8 text-xl" href="Resume for Antony Ni.pdf" download >&#60;resume/&#62;</a>
+                <a className="bg-blue-400 text-white px-4 py-1 rounded-md ml-8 text-xl" href="Resume for Antony Ni.pdf" target="_blank" >&#60;resume/&#62;</a>
               </li>
             </ul>
           </nav>
@@ -81,21 +83,112 @@ export default function Home() {
             <h2 className="pl-20 dark:text-blue-300">&#60;about&#62;</h2>
             <div className="text-center  p-10">
               <div className="text-3xl text  dark:text-blue-300"></div>
-              <p className="leading-8 mx-auto max-w-2xl text-md font-semibold dark:text-blue-300">Software Engineer with a passion for cool animations. Full-stack development with a focus on CSS, HTML, and
+              <p className="leading-8 mx-auto max-w-2xl text-md font-semibold dark:text-blue-300">Software Engineer with a passion for cool animations. Full-stack developer with a focus on CSS, HTML, and
                 JavaScript. Agile enthusiast. Avid podcast, fitness, and video game junkie with a growth mindset. Chronically bad singer. </p>
             </div>
             <h2 className="pl-20 mt-5 mb-5 dark:text-blue-300">&#60;/about&#62;</h2>
           </div>
         </section>
+        <section>
+        <h2 className="pl-20 dark:text-blue-300">&#60;skills&#62;</h2>
+            <h3 className="pb-10 pt-5 text-3xl text-center font-semibold dark:text-blue-300">
+            skills
+          </h3>
+          <div className="flex justify-center gap-10 ">
+            <div className ="flex flex-col  dark:bg-gray-800 bg-blue-200  mb-32 rounded-xl p-6 w-1/5 dark:text-blue-300">
+              <p className="text-2xl  border-b-4 dark:border-gray-900"> Front End</p>
+              <p> CSS</p>
+              <p> JavaScript</p>
+              <p> Html</p>
+              <p> Tailwind</p>
+              <p> Next.js</p>
+              <p> React</p>
+            </div>
+            <div className ="flex flex-col  dark:bg-gray-800 bg-blue-200  mb-32 rounded-xl p-6 w-1/5 dark:text-blue-300">
+              <p className="text-2xl  border-b-4 dark:border-gray-900"> Back End</p>
+              <p> Java</p>
+              <p> C++</p>
+              <p> C</p>
+              <p> Python</p>
+              <p> MySQL</p>
+              <p> Matlab</p>
+              <p> F#</p>
+              <p> OCaml</p>
+              
+            </div>
+            <div className ="flex flex-col  dark:bg-gray-800 bg-blue-200  mb-32 rounded-xl p-6 w-1/5 dark:text-blue-300">
+              <p className="text-2xl  border-b-4 dark:border-gray-900"> Tools/Concepts</p>
+              <p> Git</p>
+              <p> Bash</p>
+              <p> VS Code</p>
+              <p> Vercel</p>
+              <p> AWS</p>
+              <p> Angular</p>
+              <p> Microservices</p>
+              <p> SAAS</p>
+            </div>
+
+          </div>
+          <h2 className="pl-20 pb-20 mb-20 dark:text-blue-300">&#60;/skills&#62;</h2>
+
+        </section>
         <section className="">
-          <h3 className="pb-10 text-3xl text-center font-semibold dark:text-blue-300">
+
+          <div className="flex flex-col justify-center   ">
+            <h2 className="pl-20 dark:text-blue-300">&#60;projects&#62;</h2>
+            <h3 className="pb-10 pt-5 text-3xl text-center font-semibold dark:text-blue-300">
             my work
           </h3>
-          <div className="flex flex-col justify-center  pb-3 ">
-            <h2 className="pl-20 dark:text-blue-300">&#60;projects&#62;</h2>
-            <div className="py-20 flex justify-center">
-              <Image src={bork} height={800} className="border-2 border-black w-1/4" />
-              <p className="text-xl max-w-sm  font-semibold pl-10 my-auto dark:text-blue-300">Web Portfolio: Uses Next.js, React, Tailwind, Html, CSS, JavaScript, git</p>
+            <div className="flex justify-center gap-32 ">
+              <div className=" flex flex-col w-4/5 pt-5 pb-10  dark:bg-gray-800 bg-blue-200 shadow-2xl rounded-xl my-10">
+                <p className="dark:text-blue-300 font-semibold text-center pb-4 text-2xl">Web Portfolio</p>
+                <div className="flex justify-between ml-10 mr-10">
+                  <Image src={bork} className="border-2 border-transparent    w-2/5  object-contain" />
+
+                  <div className="flex flex-col justify-between pl-10 w-3/5">
+                    <p className="dark:text-blue-300 text-left text-sm" >Description: Web portfolio with a custom JavaScript intro animation, Email.js contact form, and a functioning light-mode. Created with React using Next.js and deployed using Vercel. </p>
+                    <p className="dark:text-blue-300 text-left text-sm pt-4 pb-4" >Languages/Tools: Next.js, Tailwind.CSS, React, CSS, HTML, JavaScript, Vercel, Email.js, Github</p>
+                    <div className="flex ml-auto">
+                      <a className="bg-blue-400 text-white  mx-2 rounded-md text-md py-2 w-16 text-center" href="https://www.antonyni.dev/" target="_blank" >Link</a>
+                      <a className="bg-blue-400 text-white  mx-2 rounded-md text-md py-2 w-16 text-center" href="https://github.com/antonyni/antony-portfolio" target="_blank">Github</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="flex justify-center gap-32 ">
+              <div className=" flex flex-col w-4/5 pt-5 pb-10  dark:bg-gray-800 bg-blue-200 shadow-2xl rounded-xl my-10">
+                <p className="dark:text-blue-300 font-semibold text-center pb-4 text-2xl">Portfolio Survey</p>
+                <div className="flex justify-between ml-10 mr-10">
+                  <Image src={survey} className="border-2 border-transparent border-black   w-2/5  object-contain" />
+
+                  <div className="flex flex-col justify-between pl-10 w-3/5">
+                    <p className="dark:text-blue-300 text-left text-sm" >Description: Survey demo using basic CSS,HTML, and JavaScript. Demonstrates correct formating and usage of the CSS form template and also proper formating of textarea and selectbox. The static demo is deployed on Github.</p>
+                    <p className="dark:text-blue-300 text-left text-sm pt-4 pb-4" >Languages/Tools: CSS, HTML, JavaScript, Github</p>
+                    <div className="flex ml-auto">
+                      <a className="bg-blue-400 text-white  mx-2 rounded-md text-md py-2 w-16 text-center" href="https://antonyni.github.io/portfolio-survey/ "target="_blank"  >Demo</a>
+                      <a className="bg-blue-400 text-white  mx-2 rounded-md text-md py-2 w-16 text-center" href="https://github.com/antonyni/portfolio-survey " target="_blank" >Github</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="flex justify-center gap-32 ">
+              <div className=" flex flex-col w-4/5 pt-5 pb-10  dark:bg-gray-800 bg-blue-200 shadow-2xl rounded-xl my-10">
+                <p className="dark:text-blue-300 font-semibold text-center pb-4 text-2xl">Arduino Tic-Tac-Toe</p>
+                <div className="flex justify-between ml-10 mr-10">
+                  <Image src={ard} className="border-2 border-transparent border-black   w-2/5  object-contain" />
+
+                  <div className="flex flex-col justify-between pl-10 w-3/5">
+                    <p className="dark:text-blue-300 text-left text-sm" >Description: A 2-person school project involving a human player playing versus an AI in tic-tac-toe. Utilized a custom AI minimax algorithm to find the best possible moves. Buttons and bluetooth communication with the arduino was used along with LED lights to display the game state. Charlieplexing was used for the wiring.</p>
+                    <p className="dark:text-blue-300 text-left text-sm pt-4 pb-4" >Languages/Tools: C++, Arduino, Processing</p>
+                    <div className="flex ml-auto">
+                      <a className="bg-blue-400 text-white  mx-2 rounded-md text-md py-2 w-16 text-center" href="Arduino Tic Tac Toe.pdf "target="_blank"  >Doc</a>
+                      <a className="bg-blue-400 text-white  mx-2 rounded-md text-md py-2 w-16 text-center" href="https://github.com/antonyni/arduino_tictactoe " target="_blank" >Github</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
             <h2 className="pl-20 dark:text-blue-300">&#60;/projects&#62;</h2>
           </div>
@@ -110,7 +203,7 @@ export default function Home() {
             <input className="bg-transparent dark:border-blue-300 border-gray-900 border rounded-sm dark:placeholder-gray-400 placeholder-gray-900" type="email" name="email" placeholder="Email" required />
             <textarea className="bg-transparent dark:border-blue-300 border-gray-900 border rounded-sm resize-none dark:placeholder-gray-400 placeholder-gray-900" name="message" rows="7" column="7" placeholder="Your Message" required>
             </textarea>
-                <button className="bg-blue-400 text-white rounded-md w-1/5 py-3 text-l" type="submit">Send Message</button>
+            <button className="bg-blue-400 text-white rounded-md w-36 py-3 text-l" type="submit">Send Message</button>
           </form>
 
           <h2 className="pl-20 dark:text-blue-300">&#60;/contact&#62;</h2>

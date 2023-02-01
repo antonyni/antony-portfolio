@@ -3,6 +3,8 @@ v.13
 - implemented contact form with email.js
 - added an alert confirmation popup
 - changed placeholder text color
+- added cards for projects with boxes and descriptions and links
+- added skills section
 
 v.12
 - fixed spamming lightmode bug which caused the text scramble to speed up
