@@ -1,3 +1,7 @@
+v.14
+- updated resume
+- increased spacing on skills page
+
 v.13
 - made site more responsive on mobile devices
 - implemented contact form with email.js
