@@ -96,7 +96,7 @@ export default function Home() {
           </h3>
           <div className="flex justify-center gap-10 ">
             <div className ="flex flex-col  dark:bg-gray-800 bg-blue-200  mb-32 rounded-xl p-6 w-1/5 dark:text-blue-300">
-              <p className="text-2xl  border-b-4 dark:border-gray-900"> Front End</p>
+              <p className="text-2xl  border-b-4 dark:border-gray-900 mb-4"> Front End</p>
               <p> CSS</p>
               <p> JavaScript</p>
               <p> Html</p>
@@ -105,7 +105,7 @@ export default function Home() {
               <p> React</p>
             </div>
             <div className ="flex flex-col  dark:bg-gray-800 bg-blue-200  mb-32 rounded-xl p-6 w-1/5 dark:text-blue-300">
-              <p className="text-2xl  border-b-4 dark:border-gray-900"> Back End</p>
+              <p className="text-2xl  border-b-4 dark:border-gray-900 mb-4"> Back End</p>
               <p> Java</p>
               <p> C++</p>
               <p> C</p>
@@ -117,7 +117,7 @@ export default function Home() {
               
             </div>
             <div className ="flex flex-col  dark:bg-gray-800 bg-blue-200  mb-32 rounded-xl p-6 w-1/5 dark:text-blue-300">
-              <p className="text-2xl  border-b-4 dark:border-gray-900"> Tools/Concepts</p>
+              <p className="text-2xl  border-b-4 dark:border-gray-900 mb-4"> Tools/Concepts</p>
               <p> Git</p>
               <p> Bash</p>
               <p> VS Code</p>
