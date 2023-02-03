@@ -126,6 +126,7 @@ export default function Home() {
               <p> Agile</p>
               <p> Microservices</p>
               <p> SAAS</p>
+              <p> APIs</p>
             </div>
 
           </div>
@@ -146,7 +147,7 @@ export default function Home() {
                   <Image src={bork} className="border-2 border-transparent    w-2/5  object-contain" />
 
                   <div className="flex flex-col justify-between pl-10 w-3/5">
-                    <p className="dark:text-blue-300 text-left text-sm" >Description: Web portfolio with a custom JavaScript intro animation, Email.js contact form, and a functioning light-mode. Created with React using Next.js and deployed using Vercel. </p>
+                    <p className="dark:text-blue-300 text-left text-sm" >Description: Web portfolio with a custom JavaScript intro animation, Email.js contact form, and a functioning light-mode. Created with React using Next.js api and deployed using Vercel. </p>
                     <p className="dark:text-blue-300 text-left text-sm pt-4 pb-4" >Languages/Tools: Next.js, Tailwind.CSS, React, CSS, HTML, JavaScript, Vercel, Email.js, Github</p>
                     <div className="flex ml-auto">
                       <a className="bg-blue-400 text-white  mx-2 rounded-md text-md py-2 w-16 text-center" href="https://www.antonyni.dev/" target="_blank" >Link</a>
