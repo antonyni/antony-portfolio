@@ -103,6 +103,7 @@ export default function Home() {
               <p> Tailwind</p>
               <p> Next.js</p>
               <p> React</p>
+              <p> React Native</p>
             </div>
             <div className ="flex flex-col  dark:bg-gray-800 bg-blue-200  mb-32 rounded-xl p-6 w-1/5 dark:text-blue-300">
               <p className="text-2xl  border-b-4 dark:border-gray-900 mb-4"> Back End</p>
