@@ -8,6 +8,7 @@ import React, { useRef } from 'react';
 import emailjs from 'emailjs-com';
 import survey from '../public/survey.png';
 import ard from '../public/arduino.png';
+import bb from '../public/bb.png'
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(true);
@@ -104,6 +105,7 @@ export default function Home() {
               <p> Next.js</p>
               <p> React</p>
               <p> React Native</p>
+              <p> Material UI</p>
             </div>
             <div className ="flex flex-col  dark:bg-gray-800 bg-blue-200  mb-32 rounded-xl p-6 w-1/5 dark:text-blue-300">
               <p className="text-2xl  border-b-4 dark:border-gray-900 mb-4"> Back End</p>
@@ -115,6 +117,8 @@ export default function Home() {
               <p> Matlab</p>
               <p> F#</p>
               <p> OCaml</p>
+              <p> MongoDB</p>
+              
               
             </div>
             <div className ="flex flex-col  dark:bg-gray-800 bg-blue-200  mb-32 rounded-xl p-6 w-1/5 dark:text-blue-300">
@@ -128,7 +132,7 @@ export default function Home() {
               <p> Agile</p>
               <p> Microservices</p>
               <p> SAAS</p>
-              <p> APIs</p>
+              <p> Docker</p>
             </div>
 
           </div>
@@ -142,6 +146,23 @@ export default function Home() {
             <h3 className="pb-10 pt-5 text-3xl text-center font-semibold dark:text-blue-300">
             my work
           </h3>
+          <div className="flex justify-center gap-32 ">
+              <div className=" flex flex-col w-4/5 pt-5 pb-10  dark:bg-gray-800 bg-blue-200 shadow-2xl rounded-xl my-10">
+                <p className="dark:text-blue-300 font-semibold text-center pb-4 text-2xl">Balkan Bros. Replica Website</p>
+                <div className="flex justify-between ml-10 mr-10">
+                  <Image src={bb} className="border-2 border-transparent   w-2/5  object-contain" />
+
+                  <div className="flex flex-col justify-between pl-10 w-3/5">
+                    <p className="dark:text-blue-300 text-left text-sm" >Description: A replica of the <a href="https://bb.agency" target="_blank" className="underline">Balkan Bros. Agency website</a> using advanced CSS,HTML, and Javascript skills. Mimics the responsive design of the website with the custom hamburger animation. Coded the unique underline animation using linear gradients. The sticky header was also custom coded to only show up when scrolling up. Advanced use of automatic light-mode when scrolling along with smooth animations for a perfect user-experience. </p>
+                    <p className="dark:text-blue-300 text-left text-sm pt-4 pb-4" >Languages/Tools: CSS, HTML, JavaScript, Github</p>
+                    <div className="flex ml-auto">
+                      <a className="bg-blue-400 text-white  mx-2 rounded-md text-md py-2 w-16 text-center" href="https://antonyni.github.io/copy-a-website/ "target="_blank"  >Demo</a>
+                      <a className="bg-blue-400 text-white  mx-2 rounded-md text-md py-2 w-16 text-center" href="https://github.com/antonyni/copy-a-website " target="_blank" >Github</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
             <div className="flex justify-center gap-32 ">
               <div className=" flex flex-col w-4/5 pt-5 pb-10  dark:bg-gray-800 bg-blue-200 shadow-2xl rounded-xl my-10">
                 <p className="dark:text-blue-300 font-semibold text-center pb-4 text-2xl">Web Portfolio</p>
@@ -159,23 +180,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="flex justify-center gap-32 ">
-              <div className=" flex flex-col w-4/5 pt-5 pb-10  dark:bg-gray-800 bg-blue-200 shadow-2xl rounded-xl my-10">
-                <p className="dark:text-blue-300 font-semibold text-center pb-4 text-2xl">Portfolio Survey</p>
-                <div className="flex justify-between ml-10 mr-10">
-                  <Image src={survey} className="border-2 border-transparent   w-2/5  object-contain" />
-
-                  <div className="flex flex-col justify-between pl-10 w-3/5">
-                    <p className="dark:text-blue-300 text-left text-sm" >Description: Survey demo using basic CSS,HTML, and JavaScript. Demonstrates correct formating and usage of the CSS form template and also proper formating of textarea and selectbox. The static demo is deployed on Github.</p>
-                    <p className="dark:text-blue-300 text-left text-sm pt-4 pb-4" >Languages/Tools: CSS, HTML, JavaScript, Github</p>
-                    <div className="flex ml-auto">
-                      <a className="bg-blue-400 text-white  mx-2 rounded-md text-md py-2 w-16 text-center" href="https://antonyni.github.io/portfolio-survey/ "target="_blank"  >Demo</a>
-                      <a className="bg-blue-400 text-white  mx-2 rounded-md text-md py-2 w-16 text-center" href="https://github.com/antonyni/portfolio-survey " target="_blank" >Github</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            
             <div className="flex justify-center gap-32 ">
               <div className=" flex flex-col w-4/5 pt-5 pb-10  dark:bg-gray-800 bg-blue-200 shadow-2xl rounded-xl my-10">
                 <p className="dark:text-blue-300 font-semibold text-center pb-4 text-2xl">Arduino Tic-Tac-Toe</p>
