@@ -38,6 +38,8 @@ export default function Home() {
         fx.setText(phrases[counter]).then(() => {
           setTimeout(next, Time)
         })
+        if(counter > phrases.length)
+          counter = 0;
         counter = (counter + 1) % phrases.length
 
       }
@@ -84,8 +86,8 @@ export default function Home() {
             <h2 className="pl-20 dark:text-blue-300">&#60;about&#62;</h2>
             <div className="text-center  p-10">
               <div className="text-3xl text  dark:text-blue-300"></div>
-              <p className="leading-8 mx-auto max-w-2xl text-md font-semibold dark:text-blue-300">Software Engineer with a passion for cool animations. Full-stack developer with a focus on CSS, HTML, and
-                JavaScript. Agile enthusiast. Avid podcast, fitness, and video game junkie with a growth mindset. Chronically bad singer. </p>
+              <p className="leading-8 mx-auto max-w-2xl text-md font-semibold dark:text-blue-300">Software Engineer with a passion for cool animations. Full-stack developer with a focus on React, Java and
+                Spring. Agile enthusiast. Avid podcast, fitness, and video game junkie with a growth mindset. Chronically bad singer. </p>
             </div>
             <h2 className="pl-20 mt-5 mb-5 dark:text-blue-300">&#60;/about&#62;</h2>
           </div>
@@ -111,11 +113,10 @@ export default function Home() {
               <p className="text-2xl  border-b-4 dark:border-gray-900 mb-4"> Back End</p>
               <p> Java</p>
               <p> C++</p>
-              <p> C</p>
+              <p> Spring</p>
               <p> Python</p>
               <p> MySQL</p>
-              <p> Matlab</p>
-              <p> F#</p>
+              <p> Node.js</p>
               <p> OCaml</p>
               <p> MongoDB</p>
               
@@ -123,8 +124,7 @@ export default function Home() {
             </div>
             <div className ="flex flex-col  dark:bg-gray-800 bg-blue-200  mb-32 rounded-xl p-6 w-1/5 dark:text-blue-300">
               <p className="text-2xl  border-b-4 dark:border-gray-900 mb-4">Tools</p>
-              <p> Git</p>
-              <p> NodeJs</p>
+              <p> GitHub</p>
               <p> Bash</p>
               <p> VS Code</p>
               <p> Vercel</p>
@@ -150,7 +150,7 @@ export default function Home() {
               <div className=" flex flex-col w-4/5 pt-5 pb-10  dark:bg-gray-800 bg-blue-200 shadow-2xl rounded-xl my-10">
                 <p className="dark:text-blue-300 font-semibold text-center pb-4 text-2xl">Balkan Bros. Replica Website</p>
                 <div className="flex justify-between ml-10 mr-10">
-                  <Image src={bb} className="border-2 border-transparent   w-2/5  object-contain" />
+                  <Image src={bb} alt="balkan bros website copy" className="border-2 border-transparent   w-2/5  object-contain" />
 
                   <div className="flex flex-col justify-between pl-10 w-3/5">
                     <p className="dark:text-blue-300 text-left text-sm" >Description: A replica of the <a href="https://bb.agency" target="_blank" className="underline">Balkan Bros. Agency website</a> using advanced CSS,HTML, and Javascript skills. Mimics the responsive design of the website with the custom hamburger animation. Coded the unique underline animation using linear gradients. The sticky header was also custom coded to only show up when scrolling up. Advanced use of automatic light-mode when scrolling along with smooth animations for a perfect user-experience. </p>
@@ -167,7 +167,7 @@ export default function Home() {
               <div className=" flex flex-col w-4/5 pt-5 pb-10  dark:bg-gray-800 bg-blue-200 shadow-2xl rounded-xl my-10">
                 <p className="dark:text-blue-300 font-semibold text-center pb-4 text-2xl">Web Portfolio</p>
                 <div className="flex justify-between ml-10 mr-10">
-                  <Image src={bork} className="border-2 border-transparent    w-2/5  object-contain" />
+                  <Image src={bork} alt="web portfolio" className="border-2 border-transparent    w-2/5  object-contain" />
 
                   <div className="flex flex-col justify-between pl-10 w-3/5">
                     <p className="dark:text-blue-300 text-left text-sm" >Description: Web portfolio with a custom JavaScript intro animation, Email.js contact form, and a functioning light-mode. Created with React using Next.js api and deployed using Vercel. </p>
@@ -185,7 +185,7 @@ export default function Home() {
               <div className=" flex flex-col w-4/5 pt-5 pb-10  dark:bg-gray-800 bg-blue-200 shadow-2xl rounded-xl my-10">
                 <p className="dark:text-blue-300 font-semibold text-center pb-4 text-2xl">Arduino Tic-Tac-Toe</p>
                 <div className="flex justify-between ml-10 mr-10">
-                  <Image src={ard} className="border-2 border-transparent   w-2/5  object-contain" />
+                  <Image src={ard} alt="arduino project" className="border-2 border-transparent   w-2/5  object-contain" />
 
                   <div className="flex flex-col justify-between pl-10 w-3/5">
                     <p className="dark:text-blue-300 text-left text-sm" >Description: A 2-person school project involving a human player playing versus an AI in tic-tac-toe. Utilized a custom AI minimax algorithm to find the best possible moves. Buttons and bluetooth communication with the arduino was used along with LED lights to display the game state. Charlieplexing was used for the wiring.</p>
@@ -246,7 +246,7 @@ function textScramble(element) {
           char = randomChar();
           queue[i].char = char;
         }
-        output += `<span class="dud">${char}</span>`;
+        output += `<span>${char}</span>`;
       } else {
         output += from;
       }
